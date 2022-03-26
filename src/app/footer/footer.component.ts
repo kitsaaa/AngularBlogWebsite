@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import blogData from '../blogData.json'
+import { IBlogPost } from '../BlogPost';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+
+  @Input() blogPosts: IBlogPost[] = blogData;
 
   constructor() { }
 
