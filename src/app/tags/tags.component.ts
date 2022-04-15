@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostServiceService } from '../post-service.service';
 
 @Component({
   selector: 'app-tags',
@@ -7,22 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TagsComponent implements OnInit {
 
-  tags: Array<string> =[
-    "#funny",
-    "#dramatic",
-    "#rental",
-    "#seeagain",
-    "#spooky",
-    "#worththecost",
-    "#lovedIt",
-    "#scary",
-    "#silly",
-    "#good4kidz"
-  ];
+  tags: any;
 
-  constructor() { }
+  constructor(private _postService: PostServiceService) { }
 
   ngOnInit(): void {
+    this._postService.getTags().subscribe(data => {
+      this.tags = data;
+    });
   }
 
 }

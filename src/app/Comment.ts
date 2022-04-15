@@ -1,6 +1,5 @@
-export interface IComment {
-    _id: string;
-    author: string;
-    comment: string;
-    date: string;
+export class IComment {
+    author: string = '';
+    comment: string = '';
+    date: string = '';
 }

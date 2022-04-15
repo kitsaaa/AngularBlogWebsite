@@ -3,7 +3,7 @@
         <div class="post d-flex align-items-center">
             <div class="image"><img src={{posts[0].featuredImage}} alt="..." class="img-fluid"></div>
             <div class="title"><strong>{{posts[0].title}}</strong><span
-                    class="date last-meta">{{posts[0].postDate}}</span></div>
+                    class="date last-meta">{{posts[0].postDate | date:'mediumDate'}}</span></div>
         </div>
     </a>
     <br>
@@ -11,14 +11,15 @@
         <div class="post d-flex align-items-center">
             <div class="image"><img src={{posts[1].featuredImage}} alt="..." class="img-fluid"></div>
             <div class="title"><strong>{{posts[1].title}}</strong><span
-                    class="date last-meta">{{posts[1].postDate}}</span></div>
+                    class="date last-meta">{{posts[1].postDate | date:'mediumDate'}}</span></div>
         </div>
     </a>
+    <br>
     <a [routerLink]="['/post', posts[2]._id]">
         <div class="post d-flex align-items-center">
             <div class="image"><img src={{posts[2].featuredImage}} alt="..." class="img-fluid"></div>
             <div class="title"><strong>{{posts[2].title}}</strong><span
-                    class="date last-meta">{{posts[2].postDate}}</span></div>
+                    class="date last-meta">{{posts[2].postDate | date:'mediumDate'}}</span></div>
         </div>
     </a>
 </div>
